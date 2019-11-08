@@ -14,6 +14,7 @@
 	the condition stores the variable in the pointer and increments
 	index. Else	prints error message
 */
+
 void INT(char* command, char** name, int* value, int* index)
 {
 	int check_INT;
@@ -30,6 +31,7 @@ void INT(char* command, char** name, int* value, int* index)
 
 	else printf("error\n");
 }
+
 /*
 	This function prints value of the variable which is in the command.
 	@param
@@ -42,6 +44,7 @@ void INT(char* command, char** name, int* value, int* index)
 	pointer prints its value. If not founded prints that notfound. Or the 
 	command is not right, prints error message.
 */
+
 void PRINT(char* command, char** name, int* value, int index)
 {
 	int j;
@@ -63,6 +66,7 @@ void PRINT(char* command, char** name, int* value, int index)
 	}
 	else printf("error\n");
 }
+
 /*
 	This function prints all name and value stored.
 	@param
@@ -74,6 +78,7 @@ void PRINT(char* command, char** name, int* value, int index)
 	This function returns nothing but if there is any stored variables, prints all.
 	Else if there is no variable prints empty,or prints error message when the command wrong.
 */
+
 void PRINT_VARS(char* command, char** name, int* value, int index)
 {
 	int j;
@@ -91,6 +96,7 @@ void PRINT_VARS(char* command, char** name, int* value, int index)
 	}
 	else printf("error\n");
 }
+
 /*
 	This function makes the program terminate.
 	@param
@@ -100,6 +106,7 @@ void PRINT_VARS(char* command, char** name, int* value, int index)
 	This function returns nothing but if command is right, the program 
 	breaks the while loop. If not prints error message.
 */
+
 void EXIT(char* command, int* exit_flag)
 {
 	int check_EXIT;
@@ -110,6 +117,7 @@ void EXIT(char* command, int* exit_flag)
 	if (check_EXIT == 1 && enter_EXIT == '\n') *exit_flag = 1;
 	else printf("error\n");
 }
+
 /*
 	This fucntions executes an arithmetic operation.
 	@param
@@ -123,6 +131,7 @@ void EXIT(char* command, int* exit_flag)
 	This function returns nothing. But executes an arithmetic operation with operands and op.
 	If commands are not correct prints error message. 
 */
+
 void OPERATION(char* command, char op, char* operand1, char* operand2, char** name, int* value, int index)
 {
 	int num1;
@@ -201,6 +210,7 @@ void OPERATION(char* command, char op, char* operand1, char* operand2, char** na
 
 	else printf("error\n");
 }
+
 int main()
 {
 	char** name;
